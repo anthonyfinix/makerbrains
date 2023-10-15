@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,37 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'estore' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'estore' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'estore' ), 'estore', '<a href="http://underscores.me/">Anthony Finix</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+	<div class="flex row container py-3">
+		<div class="col-4">
+			<div class="logo-wrapper mr-4"><?php the_custom_logo(); ?></div>
+		</div>
+		<div class="col-4">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer_1',
+					'menu_class'        => 'footer-1-navigation',
+				)
+			);
+			?>
+		</div>
+		<div class="col-4">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer_2',
+					'menu_class'        => 'footer-2-navigation',
+				)
+			);
+			?>
+		</div>
+	</div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

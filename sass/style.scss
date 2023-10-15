@@ -33,8 +33,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Elements
 	- Links
 	- Forms
-## Layouts
-# Components
+	## Layouts
+	# Components
 	- Navigation
 	- Posts and pages
 	- Comments
@@ -42,15 +42,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
-# plugins
+	# plugins
 	- Jetpack infinite scroll
-# Utilities
+	# Utilities
 	- Accessibility
 	- Alignments
-
---------------------------------------------------------------*/
+	
+	--------------------------------------------------------------*/
 
 // Import variables and mixins.
+@use "variables";
 @import "abstracts/abstracts";
 
 /*--------------------------------------------------------------
@@ -100,3 +101,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+@import "./material-icon.scss";
+@import "./resets.scss";
+@import "./util.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./product-card.scss";
+.site-main{
+	padding: 0px;
+	background-color: variables.$light;
+}
+.widget-area{
+	display: none;
+}

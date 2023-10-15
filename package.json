@@ -41,6 +41,7 @@
   },
   "scripts": {
     "watch": "sass sass/style.scss style.css --watch",
+    "watch:woocommerce": "sass sass/woocommerce.scss woocommerce.css --watch",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",

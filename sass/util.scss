@@ -1,0 +1,19 @@
+@use "mixins";
+@use "variables";
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.position-relative {
+  position: relative;
+}
+@include mixins.generate-margin-util-classes(variables.$margins);
+@include mixins.generate-padding-util-classes(variables.$paddings);
+@include mixins.generate-flex-util-classes(variables.$grid-length);

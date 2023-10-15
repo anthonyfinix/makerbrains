@@ -32,8 +32,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Elements
 	- Links
 	- Forms
-## Layouts
-# Components
+	## Layouts
+	# Components
 	- Navigation
 	- Posts and pages
 	- Comments
@@ -41,13 +41,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
-# plugins
+	# plugins
 	- Jetpack infinite scroll
-# Utilities
+	# Utilities
 	- Accessibility
 	- Alignments
 
---------------------------------------------------------------*/
+	--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -388,7 +388,6 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -701,11 +700,6 @@ textarea {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
   display: none;
 }
@@ -908,6 +902,510 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 200, "opsz" 13;
+}
+.material-symbols-rounded.sm {
+  transform: scale(0.6);
+}
+.material-symbols-rounded.md {
+  transform: scale(1.3);
+}
+.material-symbols-rounded.lg {
+  transform: scale(1.6);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+
+.my-1 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.mx-1 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.my-2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.mx-2 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+.mr-3 {
+  margin-right: 16px;
+}
+
+.ml-3 {
+  margin-left: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 16px;
+}
+
+.my-3 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.mx-3 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+.mr-4 {
+  margin-right: 32px;
+}
+
+.ml-4 {
+  margin-left: 32px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.my-4 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.mx-4 {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.p-1 {
+  padding: 4px;
+}
+
+.pt-1 {
+  padding-top: 4px;
+}
+
+.pr-1 {
+  padding-right: 4px;
+}
+
+.pl-1 {
+  padding-left: 4px;
+}
+
+.pb-1 {
+  padding-bottom: 4px;
+}
+
+.px-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.p-2 {
+  padding: 8px;
+}
+
+.pt-2 {
+  padding-top: 8px;
+}
+
+.pr-2 {
+  padding-right: 8px;
+}
+
+.pl-2 {
+  padding-left: 8px;
+}
+
+.pb-2 {
+  padding-bottom: 8px;
+}
+
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.p-3 {
+  padding: 16px;
+}
+
+.pt-3 {
+  padding-top: 16px;
+}
+
+.pr-3 {
+  padding-right: 16px;
+}
+
+.pl-3 {
+  padding-left: 16px;
+}
+
+.pb-3 {
+  padding-bottom: 16px;
+}
+
+.px-3 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-3 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.p-4 {
+  padding: 32px;
+}
+
+.pt-4 {
+  padding-top: 32px;
+}
+
+.pr-4 {
+  padding-right: 32px;
+}
+
+.pl-4 {
+  padding-left: 32px;
+}
+
+.pb-4 {
+  padding-bottom: 32px;
+}
+
+.px-4 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.py-4 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.row .col-1 {
+  flex-basis: 8.3333333333%;
+}
+.row .col-2 {
+  flex-basis: 16.6666666667%;
+}
+.row .col-3 {
+  flex-basis: 25%;
+}
+.row .col-4 {
+  flex-basis: 33.3333333333%;
+}
+.row .col-5 {
+  flex-basis: 41.6666666667%;
+}
+.row .col-6 {
+  flex-basis: 50%;
+}
+.row .col-7 {
+  flex-basis: 58.3333333333%;
+}
+.row .col-8 {
+  flex-basis: 66.6666666667%;
+}
+.row .col-9 {
+  flex-basis: 75%;
+}
+.row .col-10 {
+  flex-basis: 83.3333333333%;
+}
+.row .col-11 {
+  flex-basis: 91.6666666667%;
+}
+.row .col-12 {
+  flex-basis: 100%;
+}
+
+.header-wrapper {
+  background-color: #004ca5;
+}
+.header-wrapper .top-header {
+  background-color: rgb(245, 245, 245);
+  color: #004ca5;
+}
+.header-wrapper .top-header .mobile-wrapper,
+.header-wrapper .top-header .email-wrapper {
+  display: flex;
+  align-items: center;
+}
+.header-wrapper .top-header .mobile-wrapper p,
+.header-wrapper .top-header .email-wrapper p {
+  margin: 0px;
+}
+.header-wrapper .site-branding {
+  color: white;
+}
+.header-wrapper .site-branding .search-bar-wrapper {
+  max-width: 766px;
+  height: 100px;
+}
+.header-wrapper .site-branding .search-bar-wrapper button,
+.header-wrapper .site-branding .search-bar-wrapper input {
+  border: 0px;
+  border-radius: 0px;
+}
+.header-wrapper .site-branding .search-bar-wrapper button {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: #004ca5;
+  font-weight: bold;
+}
+.header-wrapper .site-branding .search-bar-wrapper input {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+}
+.header-wrapper .site-branding .icons-wrapper .cart-wrapper {
+  color: white;
+}
+.header-wrapper .site-branding .icons-wrapper .cart-wrapper .cart-count {
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(201, 26, 26);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  bottom: -7px;
+  right: -7px;
+}
+.header-wrapper .main-navigation {
+  background-color: #005cc8;
+}
+.header-wrapper .main-navigation .category-button {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: #004495;
+  border: none;
+  border-radius: 0px;
+}
+.header-wrapper .main-navigation .main-navigation-menu li {
+  padding: 8px 14px;
+}
+.header-wrapper .main-navigation .main-navigation-menu a {
+  color: white;
+}
+
+.site-footer {
+  background-color: #004ca5;
+  min-height: 230px;
+}
+.site-footer .footer-1-navigation,
+.site-footer .footer-2-navigation {
+  list-style: none;
+  padding: none;
+}
+.site-footer .footer-1-navigation a,
+.site-footer .footer-2-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.product-card-owl-wrapper a {
+  color: black;
+  text-decoration: none;
+}
+.product-card-owl-wrapper .product-card {
+  background-color: white;
+}
+.site-main {
+  padding: 0px;
+  background-color: rgb(245, 245, 245);
+}
+
+.widget-area {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,140 @@
+@use "sass:math";
+
+@mixin generate-margin-util-classes($margins) {
+  .m-auto {
+    margin: auto;
+  }
+  .mt-auto {
+    margin-top: auto;
+  }
+  .mr-auto {
+    margin-right: auto;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .mb-auto {
+    margin-bottom: auto;
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+  .mt-0 {
+    margin-top: 0;
+  }
+  .mr-0 {
+    margin-right: 0;
+  }
+  .ml-0 {
+    margin-left: 0;
+  }
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  .mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .p-0 {
+    padding: 0;
+  }
+  .pt-0 {
+    padding-top: 0;
+  }
+  .pr-0 {
+    padding-right: 0;
+  }
+  .pl-0 {
+    padding-left: 0;
+  }
+  .pb-0 {
+    padding-bottom: 0;
+  }
+  .px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  @for $i from 1 through length($margins) {
+    .mt-#{$i} {
+      margin-top: #{nth($margins, $i)};
+    }
+    .mr-#{$i} {
+      margin-right: #{nth($margins, $i)};
+    }
+    .ml-#{$i} {
+      margin-left: #{nth($margins, $i)};
+    }
+    .mb-#{$i} {
+      margin-bottom: #{nth($margins, $i)};
+    }
+    .my-#{$i} {
+      margin-top: #{nth($margins, $i)};
+      margin-bottom: #{nth($margins, $i)};
+    }
+    .mx-#{$i} {
+      margin-left: #{nth($margins, $i)};
+      margin-right: #{nth($margins, $i)};
+    }
+  }
+}
+@mixin generate-padding-util-classes($paddings) {
+  @for $i from 1 through length($paddings) {
+    .p-#{$i} {
+      padding: #{nth($paddings, $i)};
+    }
+    .pt-#{$i} {
+      padding-top: #{nth($paddings, $i)};
+    }
+    .pr-#{$i} {
+      padding-right: #{nth($paddings, $i)};
+    }
+    .pl-#{$i} {
+      padding-left: #{nth($paddings, $i)};
+    }
+    .pb-#{$i} {
+      padding-bottom: #{nth($paddings, $i)};
+    }
+    .px-#{$i} {
+      padding-left: #{nth($paddings, $i)};
+      padding-right: #{nth($paddings, $i)};
+    }
+    .py-#{$i} {
+      padding-top: #{nth($paddings, $i)};
+      padding-bottom: #{nth($paddings, $i)};
+    }
+  }
+}
+
+@mixin generate-flex-util-classes($grid-length) {
+  .flex {
+    display: flex;
+  }
+  .grow {
+    flex-grow: 1;
+  }
+  .shrink {
+    flex-shrink: 1;
+  }
+  .col {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    @for $i from 1 through $grid-length {
+      .col-#{$i} {
+        flex-basis: calc($i / $grid-length) * 100%;
+      }
+    }
+  }
+}

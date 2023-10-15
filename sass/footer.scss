@@ -1,0 +1,15 @@
+@use "variables";
+
+.site-footer {
+  background-color: variables.$primary;
+  min-height: 230px;
+  .footer-1-navigation,
+  .footer-2-navigation {
+    list-style: none;
+    padding: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
