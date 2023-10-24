@@ -215,43 +215,44 @@ if (class_exists('WooCommerce')) {
 }
 
 // Register Custom Post Type
-function advertisement_post_type() {
+function advertisement_post_type()
+{
 
 	$labels = array(
-		'name'                  => _x( 'Advertisements', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Advertisement', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Advertisements', 'text_domain' ),
-		'name_admin_bar'        => __( 'Advertisement', 'text_domain' ),
-		'archives'              => __( 'Advertisement Archives', 'text_domain' ),
-		'attributes'            => __( 'Advertisements Attributes', 'text_domain' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Advertisements', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Advertisement', 'text_domain' ),
-		'add_new'               => __( 'Add New Advertisement', 'text_domain' ),
-		'new_item'              => __( 'New Advertisement', 'text_domain' ),
-		'edit_item'             => __( 'Edit Advertisement', 'text_domain' ),
-		'update_item'           => __( 'Update Advertisement', 'text_domain' ),
-		'view_item'             => __( 'View Advertisement', 'text_domain' ),
-		'view_items'            => __( 'View Advertisements', 'text_domain' ),
-		'search_items'          => __( 'Search Advertisement', 'text_domain' ),
-		'not_found'             => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-		'featured_image'        => __( 'Featured Image', 'text_domain' ),
-		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-		'insert_into_item'      => __( 'Insert into Advertisement', 'text_domain' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Advertisement', 'text_domain' ),
-		'items_list'            => __( 'Advertisements list', 'text_domain' ),
-		'items_list_navigation' => __( 'Advertisements list navigation', 'text_domain' ),
-		'filter_items_list'     => __( 'Filter Advertisements list', 'text_domain' ),
+		'name'                  => _x('Advertisements', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('Advertisement', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('Advertisements', 'text_domain'),
+		'name_admin_bar'        => __('Advertisement', 'text_domain'),
+		'archives'              => __('Advertisement Archives', 'text_domain'),
+		'attributes'            => __('Advertisements Attributes', 'text_domain'),
+		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
+		'all_items'             => __('All Advertisements', 'text_domain'),
+		'add_new_item'          => __('Add New Advertisement', 'text_domain'),
+		'add_new'               => __('Add New Advertisement', 'text_domain'),
+		'new_item'              => __('New Advertisement', 'text_domain'),
+		'edit_item'             => __('Edit Advertisement', 'text_domain'),
+		'update_item'           => __('Update Advertisement', 'text_domain'),
+		'view_item'             => __('View Advertisement', 'text_domain'),
+		'view_items'            => __('View Advertisements', 'text_domain'),
+		'search_items'          => __('Search Advertisement', 'text_domain'),
+		'not_found'             => __('Not found', 'text_domain'),
+		'not_found_in_trash'    => __('Not found in Trash', 'text_domain'),
+		'featured_image'        => __('Featured Image', 'text_domain'),
+		'set_featured_image'    => __('Set featured image', 'text_domain'),
+		'remove_featured_image' => __('Remove featured image', 'text_domain'),
+		'use_featured_image'    => __('Use as featured image', 'text_domain'),
+		'insert_into_item'      => __('Insert into Advertisement', 'text_domain'),
+		'uploaded_to_this_item' => __('Uploaded to this Advertisement', 'text_domain'),
+		'items_list'            => __('Advertisements list', 'text_domain'),
+		'items_list_navigation' => __('Advertisements list navigation', 'text_domain'),
+		'filter_items_list'     => __('Filter Advertisements list', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __( 'Advertisement', 'text_domain' ),
-		'description'           => __( 'Advertisement for front view', 'text_domain' ),
+		'label'                 => __('Advertisement', 'text_domain'),
+		'description'           => __('Advertisement for front view', 'text_domain'),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail', 'custom-fields', 'page-attributes' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array('title', 'thumbnail', 'custom-fields', 'page-attributes'),
+		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -266,7 +267,6 @@ function advertisement_post_type() {
 		'capability_type'       => 'post',
 		'show_in_rest'          => true,
 	);
-	register_post_type( 'advertisement_type', $args );
-
+	register_post_type('advertisement_type', $args);
 }
-add_action( 'init', 'advertisement_post_type', 0 );
+add_action('init', 'advertisement_post_type', 0);
