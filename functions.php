@@ -148,6 +148,16 @@ add_action('widgets_init', 'estore_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
+function enqueue_bootstrap()
+{
+	// Enqueue Bootstrap CSS
+	wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/5.1/css/bootstrap.min.css');
+
+	// Enqueue Bootstrap JS and Popper.js (required for Bootstrap's JavaScript)
+	wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/5.1/js/bootstrap.min.js', array('jquery'), '', true);
+	wp_enqueue_script('popper-js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array('jquery'), '', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 function estore_scripts()
 {
 	wp_enqueue_style('estore-style', get_stylesheet_uri(), array(), _S_VERSION);
