@@ -103,6 +103,11 @@ function estore_setup()
 			'flex-height' => true,
 		)
 	);
+	$registration_allowed = get_option('users_can_register');
+
+	if (!$registration_allowed) {
+		update_option('users_can_register', 1);
+	}
 }
 add_action('after_setup_theme', 'estore_setup');
 
