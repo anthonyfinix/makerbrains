@@ -41,3 +41,51 @@ $woocommerce__color-info: #3d9cd2;
  * WooCommerce widgets
  */
 @import "plugins/woocommerce/widgets";
+
+.wc-finix-product {
+  .onsale {
+    position: absolute;
+    z-index: 5;
+  }
+  .wc-finix-product-attribute-wrapper {
+    gap: 20px;
+    .woocommerce-product-gallery {
+      .flex-viewport {
+        max-width: 300px;
+      }
+      .flex-control-nav {
+        max-width: 300px;
+        display: flex;
+        li {
+          float: none !important;
+        }
+      }
+    }
+
+    .cart {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      .quantity {
+        input {
+          width: 50px;
+        }
+        overflow: hidden;
+      }
+      .single_add_to_cart_button {
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .summary {
+      margin-top: 0px;
+      .product_title {
+        margin-top: 0px;
+      }
+      .product_meta {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

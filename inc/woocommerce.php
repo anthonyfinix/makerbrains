@@ -238,7 +238,7 @@ if (!function_exists('estore_woocommerce_header_cart')) {
 
 function estore_finix_before_single_product()
 {
-	echo '<div class="container">';
+	echo '<div class="wc-finix-product container">';
 }
 
 add_action('woocommerce_before_single_product', 'estore_finix_before_single_product', 9);
@@ -250,7 +250,7 @@ add_action('woocommerce_after_single_product', 'estore_finix_after_single_produc
 
 function estore_finix_before_single_product_summary()
 {
-	echo '<div class="flex">';
+	echo '<div class="wc-finix-product-attribute-wrapper flex">';
 }
 
 add_action('woocommerce_before_single_product_summary', 'estore_finix_before_single_product_summary', 9);
@@ -259,3 +259,45 @@ function estore_finix_after_single_product_summary()
 	echo "</div>";
 }
 add_action('woocommerce_after_single_product_summary', 'estore_finix_after_single_product_summary', 9);
+
+function estore_finix_woocommerce_before_cart()
+{
+	echo '<div class="wc-finix-cart-wrapper container">';
+}
+
+add_action('woocommerce_before_cart', 'estore_finix_woocommerce_before_cart', 11);
+function estore_finix_woocommerce_after_cart()
+{
+	echo '</div>';
+}
+add_action('woocommerce_after_cart', 'estore_finix_woocommerce_after_cart', 9);
+
+
+// add_action('woocommerce_before_cart', 'estore_finix_woocommerce_after_cart', 9);
+// add_action('woocommerce_cart_collaterals', 'estore_finix_woocommerce_after_cart', 9);
+function estore_afinix_woocommerce_cart_item_thumbnail($image, $cartItems, $key)
+{
+	preg_match('/<img.*?src=["\'](.*?)["\'].*?>/i', $image, $matches);
+	return '<img class="estore-finix-cart-item-thumbnail" src="' . $matches[1] . '"/>';
+}
+add_filter('woocommerce_cart_item_thumbnail', 'estore_afinix_woocommerce_cart_item_thumbnail', 9, 3);
+
+
+function estore_afinix_woocommerce_cart_item_remove_link($removeLink)
+{
+
+	preg_match('/<a[^>]+href=["\'](.*?)["\'][^>]+data-product_id=["\'](.*?)["\'][^>]+data-product_sku=["\'](.*?)["\'][^>]*>/i', $removeLink, $matches);
+	return '<a class="estore-afinix-remove-cart-item" href="'.$matches[1].'" data-product_id="'.$matches[2].'" data-product_sku= "'.$matches[3].'"><span class="material-symbols-rounded">delete</span></a>';
+}
+add_filter('woocommerce_cart_item_remove_link', 'estore_afinix_woocommerce_cart_item_remove_link');
+
+function estore_finix_woocommerce_before_checkout_form()
+{
+	echo '<div class="container">';
+}
+add_action('woocommerce_before_checkout_form', 'estore_finix_woocommerce_before_checkout_form', 9);
+function estore_finix_woocommerce_after_checkout_form()
+{
+	echo '</div>';
+}
+add_action('woocommerce_after_checkout_form', 'estore_finix_woocommerce_after_checkout_form', 9);

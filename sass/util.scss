@@ -17,3 +17,4 @@
 @include mixins.generate-margin-util-classes(variables.$margins);
 @include mixins.generate-padding-util-classes(variables.$paddings);
 @include mixins.generate-flex-util-classes(variables.$grid-length);
+@include mixins.generate-border-radius-util-classes(variables.$border-radius-amt);

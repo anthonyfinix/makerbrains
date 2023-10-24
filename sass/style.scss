@@ -108,8 +108,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "./header.scss";
 @import "./footer.scss";
 @import "./product-card.scss";
+@import "./woocommerce.scss";
+@import "./cart.scss";
+@import "./checkout.scss";
 .site-main{
-	padding: 0px;
+	padding: 0.1px;
 	background-color: variables.$light;
 }
 .widget-area{
