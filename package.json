@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:watch": "sass --watch sass/index.scss:style.css",
+    "build:style": "sass sass/index.scss:style.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "homepage": "https://makerbrains.in",
   "bugs": {
     "url": "https://github.com/anthonyfinix/makerbrains/issues"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }

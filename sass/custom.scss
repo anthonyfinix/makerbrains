@@ -1,0 +1,68 @@
+/*
+ * custom.css
+ * ==========================
+ *
+ * Description: This SCSS file is the primary stylesheet for the eStore child theme, catering to a wide range of
+ *              styles for various components commonly found in a WooCommerce eStore theme. It encompasses
+ *              styles for headers, footers, product listings, cart pages, and more.
+ *
+ * Author: Anthony Finix
+ * Version: 1.0.0
+ *
+ * Contents:
+ * - Header styles
+ * - Footer styles
+ * - Product listing styles
+ * - Cart and checkout page styles
+ * - Typography and color definitions
+ * - Responsive design styles
+ * - Custom component styles
+ *
+ * Notes:
+ * - Further folder and file hierarchy may be established as the style complexity grows.
+ */
+
+// Actual SCSS code starts below this comment.
+
+.middle-header-wrapper > .tg-container {
+  display: flex;
+  float: none;
+  align-items: center;
+}
+.main-search-wrapper {
+  flex-grow: 1;
+  margin-left: 40px;
+  position: relative;
+}
+.main-search-wrapper > form {
+  display: flex;
+}
+.main-search-wrapper > form > #search-input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 52px;
+  padding-left: 15px;
+  border-right: none;
+}
+.main-search-wrapper > form > #search-input:focus,
+.main-search-wrapper > form > #search-input:focus-visible {
+  outline: none;
+}
+.main-search-wrapper > form > button[type="submit"] {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  color: rgb(60, 60, 60);
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.search-results-wrapper {
+  display: none;
+  background: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
