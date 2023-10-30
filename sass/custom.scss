@@ -65,4 +65,24 @@
   z-index: 3;
   max-height: 70vh;
   overflow-y: scroll;
+  .search-result {
+    display: flex;
+    gap: 10px;
+    .search-result-thumbnail {
+      display: block;
+      flex-shrink: 0;
+      border-radius: 3px;
+      overflow: hidden;
+      img {
+        width: 100px;
+      }
+    }
+    .search-result-details-wrapper {
+      flex-grow: 1;
+      .search-result-title {
+      }
+      .search-result-excerpt {
+      }
+    }
+  }
 }

@@ -43,8 +43,18 @@ function ajax_search()
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
+            $product_id = get_the_ID();
+            $product_title = get_the_title();
+            $product_excerpt = get_the_excerpt();
+            $product_thumbnail = get_the_post_thumbnail($product_id, 'thumbnail');
             // Output search results here
-            echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a><br>';
+            echo '<div class="search-result mx-3 mb-4">';
+            echo '<a class="search-result-thumbnail" href="' . get_permalink() . '">' . $product_thumbnail . '</a>';
+            echo '<div class="search-result-details-wrapper">';
+            echo '<a class="search-result-title" href="' . get_permalink() . '"><p class="mb-0">' . $product_title . '</p></a>';
+            echo '<small class="search-result-excerpt">' . $product_excerpt . '</small>';
+            echo '</div>';
+            echo '</div>';
         }
     } else {
         echo 'No results found.';
